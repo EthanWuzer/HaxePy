@@ -1,12 +1,23 @@
 import sys
 import os
 import argparse
-from errorHandler import errorHandler
+from errorHandler import ErrorHandler
+from scanner import Scanner
 
 #a haxe interpreter written in python
 class haxe:
     def __init__(self):
         self.errorHandler = ErrorHandler()
+        
+    def run_file(self, path):
+        with open(path, "r") as f:
+            source = f.read()
+        self.run(source)
+        if self.errorHandler.hadError:
+            sys.exit()
+        if self.errorHandler.hadRuntimeError:
+            sys.exit()
+        return 0
 
     def run_prompt(self):
         try:
@@ -20,6 +31,7 @@ class haxe:
     def run(self, source):
         scanner = Scanner(self.errorHandler(), source)
         tokens = scanner.scanTokens()
+        
 if __name__ == "__main__":
     haxe = haxe()
     arg_parser = argparse.ArgumentParser()

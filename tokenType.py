@@ -6,7 +6,8 @@ TokenType = Enum("TokenType",
                         BANG BANG_EQUAL\
                             EQUAL EQUAL_EQUAL\
                                 LESS LESS_EQUAL\
-                                    IDENTIFIER STRING NUMBER\
-                                        AND ELSE FALSE FOR IF NULL OR\
-                                            PRINT RETURN TRUE WHILE BREAK\
-                                                EOF")
+                                    GREATER GREATER_EQUAL\
+                                        IDENTIFIER STRING NUMBER\
+                                            AND ELSE FALSE FOR IF NULL OR\
+                                                PRINT RETURN TRUE WHILE BREAK\
+                                                    EOF")
