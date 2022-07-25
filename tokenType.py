@@ -10,4 +10,4 @@ TokenType = Enum("TokenType",
                                         IDENTIFIER STRING NUMBER\
                                             AND ELSE FALSE FOR IF NULL OR\
                                                 PRINT RETURN TRUE WHILE BREAK\
-                                                    EOF")
+                                                    EOF VAR")

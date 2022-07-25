@@ -1,0 +1,11 @@
+var z = 1;
+var x = 1;
+while (z <= 10){
+   while (x < 10){
+       print ("foo");
+       x = x+1;
+    }
+    print ("bar");
+    z = z+1;
+    x = z;
+}
